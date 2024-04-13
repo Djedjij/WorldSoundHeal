@@ -1,0 +1,58 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.bigWrapper {
+  background-color: App.$grey;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include wrapper-1170px;
+  padding-top: 100px;
+}
+.header {
+  @include headerh3;
+}
+
+.services {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.service {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  min-height: 250px;
+  position: relative;
+}
+
+.service img {
+  width: 80px;
+  height: 80px;
+}
+
+.service h4 {
+  font-size: 30px;
+  font-family: App.$openSansFont;
+  font-weight: 500;
+  margin-top: 25px;
+  text-align: center;
+}
+.service p {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}

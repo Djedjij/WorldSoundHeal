@@ -1,0 +1,28 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.wrapper {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutText {
+  max-width: 30%;
+}
+.aboutHeader {
+  @include headerh3;
+}
+.aboutText p {
+  margin-top: 30px;
+  @include bigP;
+}
+.aboutImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-left: 50px;
+}
+.aboutImages img {
+  width: 220px;
+}

@@ -1,0 +1,37 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.bigWrapper {
+  background-image: url("../../../public/images/main3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  overflow-x: hidden;
+}
+.wrapper {
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.header {
+  @include headerh3;
+  margin-top: 150px;
+}
+
+.text {
+  @include bigP;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.orangeButton {
+  margin-bottom: 100px;
+}

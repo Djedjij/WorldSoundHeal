@@ -1,0 +1,35 @@
+@use "../../App.scss" as App;
+
+.wrapper {
+  position: absolute;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.name {
+  margin-left: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: App.$openSansFont;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: App.$openSansFont;
+}
+
+.menu ul {
+  display: flex;
+  margin-right: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: App.$openSansFont;
+}
+.menu ul li {
+  margin-left: 20px;
+}
