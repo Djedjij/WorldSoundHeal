@@ -12,7 +12,6 @@ interface IReview {
   text: string;
   company: string;
 }
-
 export const services: IService[] = [
   {
     name: "Индивидуальный сеанс",
