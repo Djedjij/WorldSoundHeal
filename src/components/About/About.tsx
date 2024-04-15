@@ -1,5 +1,6 @@
 import React, { LegacyRef } from "react";
 import styles from "./About.module.scss";
+import { imgUrl } from "../../utils/consts";
 
 const About = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
   return (
@@ -16,10 +17,38 @@ const About = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
         </p>
       </div>
       <div className={styles.aboutImages}>
-        <img src="/images/about-images/about1.jpg" alt="" />
-        <img src="/images/about-images/about2.jpg" alt="" />
-        <img src="/images/about-images/about3.jpg" alt="" />
-        <img src="/images/about-images/about4.jpg" alt="" />
+        <img
+          src={
+            imgUrl
+              ? imgUrl + "/images/about-images/about1.jpg"
+              : "/images/about-images/about1.jpg"
+          }
+          alt=""
+        />
+        <img
+          src={
+            imgUrl
+              ? imgUrl + "/images/about-images/about2.jpg"
+              : "/images/about-images/about2.jpg"
+          }
+          alt=""
+        />
+        <img
+          src={
+            imgUrl
+              ? imgUrl + "/images/about-images/about3.jpg"
+              : "/images/about-images/about3.jpg"
+          }
+          alt=""
+        />
+        <img
+          src={
+            imgUrl
+              ? imgUrl + "/images/about-images/about4.jpg"
+              : "/images/about-images/about4.jpg"
+          }
+          alt=""
+        />
       </div>
     </div>
   );
