@@ -1,5 +1,6 @@
 import React, { LegacyRef } from "react";
 import styles from "./Contats.module.scss";
+import { imgUrl } from "../../utils/consts";
 const Contacts = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
   return (
     <div ref={ref} className={styles.wrapper}>
@@ -11,13 +12,34 @@ const Contacts = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
       <p className={styles.smallHeader}>Мы в социальных сетях</p>
       <div className={styles.socials}>
         <div className={styles.social}>
-          <img src="/images/icons/youtube.svg" alt="" />
+          <img
+            src={
+              imgUrl
+                ? imgUrl + "/images/icons/youtube.svg"
+                : "/images/icons/youtube.svg"
+            }
+            alt=""
+          />
         </div>
         <div className={styles.social}>
-          <img src="/images/icons/instagram.svg" alt="" />
+          <img
+            src={
+              imgUrl
+                ? imgUrl + "/images/icons/instagram.svg"
+                : "/images/icons/instagram.svg"
+            }
+            alt=""
+          />
         </div>
         <div className={styles.social}>
-          <img src="/images/icons/telegram.svg" alt="" />
+          <img
+            src={
+              imgUrl
+                ? imgUrl + "/images/icons/telegram.svg"
+                : "/images/icons/telegram.svg"
+            }
+            alt=""
+          />
         </div>
       </div>
     </div>
