@@ -1,14 +1,18 @@
-import React from "react";
+import React, { LegacyRef } from "react";
 import styles from "./About.module.scss";
-const About = () => {
+
+const About = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
   return (
-    <div className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper}>
       <div className={styles.aboutText}>
         <h3 className={styles.aboutHeader}>О нашей компании</h3>
         <p>
-          Коротко представьтесь и расскажите о компании или сервисе в 3-4
-          строках. С какими клиентами вы работаете, что вас вдохновляет. Чем
-          гордится ваша команда, какие у нее ценности и мотивация.
+          World Sound Heal — ваш проводник в мир исцеления через звук. Мы
+          специализируемся на саундхилинге, помогая людям достичь гармонии и
+          внутреннего спокойствия. Наша миссия — сделать саундхилинг доступным
+          для всех, гармонизируя тело, душу и ум через музыку и звук. Наши
+          ценности — это стремление к совершенству в каждом предоставленном
+          сеансе.
         </p>
       </div>
       <div className={styles.aboutImages}>
@@ -19,6 +23,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

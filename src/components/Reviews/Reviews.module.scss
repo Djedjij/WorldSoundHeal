@@ -1,0 +1,75 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.bigWrapper {
+  width: 100%;
+  background-color: App.$grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  @include wrapper-1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  @include headerh3;
+  margin-top: 100px;
+}
+.reviews {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.review {
+  display: flex;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.review img {
+  border-radius: 50%;
+  margin-right: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.55;
+  font-family: App.$openSansFont;
+  font-weight: 200;
+  color: #000;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+.name {
+  font-size: 14px;
+  line-height: 1.35;
+  font-family: App.$openSansFont;
+  font-weight: 600;
+  color: #000;
+  margin-top: 15px;
+}
+.jobBlock {
+  margin-top: 5px;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.55;
+  font-family: App.$openSansFont;
+  font-weight: 200;
+  color: #000;
+  opacity: 0.8;
+}
+
+.company {
+  border-bottom: 2px solid App.$orange;
+  margin-left: 5px;
+}

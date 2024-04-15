@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
-  min-height: 250px;
+  min-height: 270px;
   position: relative;
 }
 
@@ -52,7 +52,27 @@
   text-align: center;
 }
 .service p {
-  position: absolute;
   bottom: 0;
   text-align: center;
+}
+.desc {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.price {
+  display: flex;
+  margin-top: 10px;
+  font-size: 18px;
+  // font-family: App.$openSansFont;
+}
+.priceNum {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 700;
+  color: App.$orange;
 }

@@ -1,0 +1,61 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.bigWrapper {
+  background-image: url("../../../public/images/main4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: max-content;
+}
+.shadow {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header {
+  @include headerh3;
+  margin-top: 300px;
+}
+.text {
+  @include bigP;
+  margin-top: 10px;
+}
+
+.shadow form {
+  margin-top: 50px;
+}
+
+.formInput {
+  margin: 10px;
+  height: 40px;
+  padding: 8px 15px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.submitInput {
+  background-color: App.$orange;
+  margin: 10px;
+  height: 60px;
+  color: white;
+  padding: 8px 20px;
+  border: 2px solid App.$orange;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.confidential {
+  font-size: 12px;
+  margin-bottom: 300px;
+  margin-top: 20px;
+}
+
+.confidential a {
+  color: App.$orange;
+}
