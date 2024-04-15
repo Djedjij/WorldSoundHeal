@@ -16,7 +16,7 @@ interface IReview {
 export const services: IService[] = [
   {
     name: "Индивидуальный сеанс",
-    img: "/images/icons/user.svg",
+    img: "../../public/images/icons/user.svg",
     description:
       "Персональный подход и глубокая релаксация, нацеленные на ваше уникальное исцеление.",
     price: "90",
