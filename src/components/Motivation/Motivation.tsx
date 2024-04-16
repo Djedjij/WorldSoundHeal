@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Motivation.module.scss";
 import OrangeButton from "../../UI/OrangeButton/OrangeButton";
+import Modal from "../../UI/Modal/Modal";
 const Motivation = () => {
+  const [activeModal, setActiveModal] = useState<boolean>(false);
   return (
     <div className={styles.bigWrapper}>
       <div className={styles.wrapper}>
@@ -15,8 +17,12 @@ const Motivation = () => {
           качество вашей жизни уже сегодня
         </p>
         <div className={styles.orangeButton}>
-          <OrangeButton text="Запишитесь на сеанс" />
+          <OrangeButton
+            onClick={() => setActiveModal(true)}
+            text="Запишитесь на сеанс"
+          />
         </div>
+        <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Main.module.scss";
 import OrangeButton from "../../UI/OrangeButton/OrangeButton";
 import { motion } from "framer-motion";
 import { imgUrl } from "../../utils/consts";
+import Modal from "../../UI/Modal/Modal";
 interface iMainProps {
   refToAbout: () => void;
 }
 const Main: React.FC<iMainProps> = ({ refToAbout }) => {
+  const [activeModal, setActiveModal] = useState<boolean>(false);
   const cardsAnimationY = {
     hidden: {
       y: 200,
@@ -42,7 +44,10 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
           путь к исцелению и здоровью!
         </motion.h4>
         <motion.div variants={cardsAnimationY} custom={3}>
-          <OrangeButton text="ЗАПИШИТЕСЬ СЕЙЧАС" />
+          <OrangeButton
+            onClick={() => setActiveModal(true)}
+            text="ЗАПИШИТЕСЬ СЕЙЧАС"
+          />
         </motion.div>
         <img
           onClick={refToAbout}
@@ -54,6 +59,7 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
           }
           alt=""
         ></img>
+        <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
       </div>
     </motion.div>
   );

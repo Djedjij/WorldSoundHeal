@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Modal.module.scss";
+import Form from "../Form/Form";
 
 interface IModalProps {
   activeModal: boolean;
@@ -18,7 +19,7 @@ const Modal: React.FC<IModalProps> = ({ activeModal, setActiveModal }) => {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <h1>АБОБА</h1>
+        <Form styles={styles} />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
 .modal {
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -22,6 +22,10 @@
   opacity: 1;
 }
 .modalContent {
+  background-image: url("../../../public/images/main5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-color: white;
   height: max-content;
   width: max-content;
@@ -29,8 +33,99 @@
   transform: translateY(300px);
   transition: 0.4s all ease;
   border-radius: 12px;
+  height: max-content;
+  max-height: 70vh;
 }
 .modalContent.activeContent {
   transform: translateY(0);
   opacity: 1;
+}
+.shadow {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  padding: 30px 50px 10px 50px;
+}
+.header {
+  @include headerh3;
+}
+.text {
+  @include bigP;
+  margin-top: 10px;
+}
+
+.shadow form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.formInput {
+  margin: 10px;
+  height: 40px;
+  padding: 8px 15px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  width: 100%;
+}
+.submitInput {
+  background-color: App.$orange;
+  margin: 10px;
+  height: 60px;
+  color: white;
+  padding: 8px 20px;
+  border: 2px solid App.$orange;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.confidential {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.confidential a {
+  color: App.$orange;
+}
+
+@media screen and (max-width: 865px) {
+  .header {
+    font-size: 38px;
+  }
+  .text {
+    font-size: 16px;
+    text-align: center;
+  }
+  .formBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .formInput {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 665px) {
+  .header {
+    font-size: 24px;
+    text-align: center;
+  }
+  .text {
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+  }
+  .confidential {
+    width: 80%;
+    text-align: center;
+  }
 }
