@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/WorldSoundHeal/static/css/main.b3b7168e.css",
-    "main.js": "/WorldSoundHeal/static/js/main.8c4d9db4.js",
+    "main.css": "/WorldSoundHeal/static/css/main.4696ecf2.css",
+    "main.js": "/WorldSoundHeal/static/js/main.32258e15.js",
     "static/js/453.b47dd986.chunk.js": "/WorldSoundHeal/static/js/453.b47dd986.chunk.js",
     "static/media/main2.jpeg": "/WorldSoundHeal/static/media/main2.cd2493c2a31f5d5fa119.jpeg",
     "static/media/main3.png": "/WorldSoundHeal/static/media/main3.2fe31945337cac478d5e.png",
+    "static/media/main5.jpg": "/WorldSoundHeal/static/media/main5.61673e3007e2c268c22a.jpg",
     "static/media/main1.jpg": "/WorldSoundHeal/static/media/main1.58f974e0b5717c46b8da.jpg",
     "static/media/main4.png": "/WorldSoundHeal/static/media/main4.8b48620d2eeab7c881d3.png",
     "index.html": "/WorldSoundHeal/index.html",
-    "main.b3b7168e.css.map": "/WorldSoundHeal/static/css/main.b3b7168e.css.map",
-    "main.8c4d9db4.js.map": "/WorldSoundHeal/static/js/main.8c4d9db4.js.map",
+    "main.4696ecf2.css.map": "/WorldSoundHeal/static/css/main.4696ecf2.css.map",
+    "main.32258e15.js.map": "/WorldSoundHeal/static/js/main.32258e15.js.map",
     "453.b47dd986.chunk.js.map": "/WorldSoundHeal/static/js/453.b47dd986.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3b7168e.css",
-    "static/js/main.8c4d9db4.js"
+    "static/css/main.4696ecf2.css",
+    "static/js/main.32258e15.js"
   ]
 }
