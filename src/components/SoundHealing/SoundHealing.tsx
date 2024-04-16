@@ -11,7 +11,7 @@ const SoundHealing = () => {
     visible: (custom: number) => ({
       x: 0,
       opacity: 1,
-      transition: { delay: custom * 0.6, duration: 0.8 },
+      transition: { delay: custom * 0.6, duration: 0.6 },
     }),
   };
   const xMinusAnimation = {
@@ -22,7 +22,7 @@ const SoundHealing = () => {
     visible: (custom: number) => ({
       x: 0,
       opacity: 1,
-      transition: { delay: custom * 0.6, duration: 0.8 },
+      transition: { delay: custom * 0.6, duration: 0.6 },
     }),
   };
 
