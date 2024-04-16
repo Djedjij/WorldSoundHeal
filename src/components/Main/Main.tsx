@@ -39,7 +39,7 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
         >
           Присоединяйтесь к сеансам саундхилинга от World Sound Heal и обретите
           гармонию тела и души. Запишитесь на сеанс уже сейчас и начните свой
-          путь к исцелению и здоровью! Кнопка с призывом к действию
+          путь к исцелению и здоровью!
         </motion.h4>
         <motion.div variants={cardsAnimationY} custom={3}>
           <OrangeButton text="ЗАПИШИТЕСЬ СЕЙЧАС" />

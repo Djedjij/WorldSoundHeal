@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.scss";
 import Main from "./components/Main/Main";
 import Header from "./components/Header/Header";
@@ -12,8 +12,11 @@ import FormBlock from "./components/FormBlock/FormBlock";
 import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import DropHeader from "./components/Header/DropHeader";
+import Modal from "./UI/Modal/Modal";
 
 function App() {
+  const [activeModal, setActiveModal] = useState<boolean>(false);
+
   const refAbout = useRef<HTMLDivElement>(null);
   const refContacts = useRef<HTMLDivElement>(null);
   const refServices = useRef<HTMLDivElement>(null);
@@ -51,6 +54,7 @@ function App() {
       <Reviews />
       <FormBlock />
       <Contacts ref={refContacts} />
+      <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
       <Footer />
     </div>
   );
