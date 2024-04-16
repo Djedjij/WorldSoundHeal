@@ -44,8 +44,8 @@ export const services: IService[] = [
   {
     name: "Групповой сеанс на выезде",
     img: imgUrl
-      ? imgUrl + "/images/icons/carusers.svg"
-      : "/images/icons/carusers.svg",
+      ? imgUrl + "/images/icons/carUsers.svg"
+      : "/images/icons/carUsers.svg",
     description:
       "Привезём гармонию туда, где вы собрались, обеспечив исцеление для всех участников.",
     price: "390",

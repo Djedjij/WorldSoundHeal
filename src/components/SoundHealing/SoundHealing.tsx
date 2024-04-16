@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const SoundHealing = () => {
   const xPlusAnimation = {
     hidden: {
-      x: -600,
+      x: -200,
       opacity: 0,
     },
     visible: (custom: number) => ({
@@ -16,7 +16,7 @@ const SoundHealing = () => {
   };
   const xMinusAnimation = {
     hidden: {
-      x: 600,
+      x: 200,
       opacity: 0,
     },
     visible: (custom: number) => ({

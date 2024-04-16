@@ -74,10 +74,12 @@
 }
 @media screen and (max-width: 590px) {
   .header {
-    font-size: 1.2em;
+    font-size: 2em;
+    text-align: center;
+    width: 90%;
   }
   .smallHeader {
     font-size: 14px;
-    width: 90%;
+    width: 80%;
   }
 }
