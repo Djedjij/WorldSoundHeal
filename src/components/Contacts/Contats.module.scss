@@ -56,3 +56,16 @@
   width: 25px;
   height: 25px;
 }
+
+@media screen and (max-width: 665px) {
+  .header {
+    font-size: 24px;
+    text-align: center;
+  }
+  .phone {
+    font-size: 24px;
+  }
+  .mail {
+    font-size: 24px;
+  }
+}

@@ -9,9 +9,18 @@
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  max-width: 100%;
 }
 
 .orangeCheck img {
   width: 60%;
   height: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .orangeCheck {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
 }

@@ -59,3 +59,42 @@
 .confidential a {
   color: App.$orange;
 }
+
+@media screen and (max-width: 865px) {
+  .header {
+    font-size: 38px;
+    margin-top: 100px;
+  }
+  .text {
+    font-size: 16px;
+    text-align: center;
+  }
+  .formBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .formInput {
+    width: 80%;
+  }
+  .confidential {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 665px) {
+  .header {
+    font-size: 24px;
+    text-align: center;
+  }
+  .text {
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+  }
+  .confidential {
+    width: 80%;
+    text-align: center;
+  }
+}

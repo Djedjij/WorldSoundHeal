@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Main.module.scss";
 import OrangeButton from "../../UI/OrangeButton/OrangeButton";
 import { motion } from "framer-motion";
+import { imgUrl } from "../../utils/consts";
 interface iMainProps {
   refToAbout: () => void;
 }
@@ -46,7 +47,11 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
         <img
           onClick={refToAbout}
           className={styles.arrowDown}
-          src="/images/icons/arrowDown.svg"
+          src={
+            imgUrl
+              ? imgUrl + "/images/icons/arrowDown.svg"
+              : "/images/icons/arrowDown.svg"
+          }
           alt=""
         ></img>
       </div>

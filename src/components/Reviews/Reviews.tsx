@@ -15,7 +15,6 @@ const Reviews = () => {
                 <p className={styles.name}>{review.name}</p>
                 <div className={styles.jobBlock}>
                   <p className={styles.job}>{review.job}</p>
-
                   <p className={styles.company}>{review.company}</p>
                 </div>
               </div>

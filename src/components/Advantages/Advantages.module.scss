@@ -34,3 +34,33 @@
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1250px) {
+  .header {
+    font-size: 38px;
+  }
+  .advantagesUl {
+    padding: 0 50px;
+  }
+  .advantage {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 24px;
+  }
+  .advantage {
+    margin-left: 10px;
+  }
+  .advantagesUl {
+    padding: 0 20px;
+  }
+  .advantage h4 {
+    font-size: 16px;
+  }
+  .advantage p {
+    font-size: 14px;
+  }
+}

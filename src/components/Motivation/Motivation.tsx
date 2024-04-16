@@ -15,7 +15,7 @@ const Motivation = () => {
           качество вашей жизни уже сегодня
         </p>
         <div className={styles.orangeButton}>
-          <OrangeButton text="Призыв к действию" />
+          <OrangeButton text="Запишитесь на сеанс" />
         </div>
       </div>
     </div>

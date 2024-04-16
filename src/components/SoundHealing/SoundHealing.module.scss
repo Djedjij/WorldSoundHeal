@@ -7,7 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
+  height: max-content;
 }
 .shadow {
   background-color: rgba(0, 0, 0, 0.6);
@@ -22,6 +22,8 @@
   color: white;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+  margin-top: 50px;
 }
 
 .header {
@@ -29,15 +31,47 @@
   margin-top: 30px;
 }
 .text {
+  @include bigP;
   margin-top: 20px;
+  font-size: 18px;
   width: 80%;
 }
 
-.soundHealingUl {
-  margin-top: 50px;
-}
 .soundHealingUl li {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .textBlock {
+    width: 100%;
+    text-align: center;
+  }
+  .textBlockRight {
+    width: 100%;
+    text-align: center;
+  }
+  .header {
+    font-size: 38px;
+    text-align: center;
+  }
+  .text {
+    @include bigP;
+    font-size: 16px;
+    width: 100%;
+  }
+  .soundHealingUl {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 24px;
+    text-align: center;
+  }
+  .text {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }

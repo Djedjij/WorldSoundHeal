@@ -26,6 +26,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 100px;
+  padding: 0 20px;
 }
 
 .review {
@@ -72,4 +73,34 @@
 .company {
   border-bottom: 2px solid App.$orange;
   margin-left: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    font-size: 38px;
+  }
+  .reviews {
+    margin-top: 50px;
+  }
+  .review {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    font-size: 24px;
+  }
+  .review {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .jobBlock {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }

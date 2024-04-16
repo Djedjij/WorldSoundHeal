@@ -41,3 +41,24 @@
 .orangeButton {
   margin-bottom: 100px;
 }
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 38px;
+    width: 80%;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    font-size: 24px;
+    width: 80%;
+  }
+  .text {
+    font-size: 14px;
+    width: 80%;
+  }
+}

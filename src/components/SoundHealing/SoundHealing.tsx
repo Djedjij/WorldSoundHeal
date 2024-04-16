@@ -1,13 +1,46 @@
 import React from "react";
 import styles from "./SoundHealing.module.scss";
 import OrangeCheck from "../../UI/OrangeCheck.tsx/OrangeCheck";
+import { motion } from "framer-motion";
 const SoundHealing = () => {
+  const xPlusAnimation = {
+    hidden: {
+      x: -600,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.6, duration: 0.8 },
+    }),
+  };
+  const xMinusAnimation = {
+    hidden: {
+      x: 600,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.6, duration: 0.8 },
+    }),
+  };
+
   return (
     <div className={styles.bigWrapper}>
       <div className={styles.shadow}>
-        <div className={styles.wrapper}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.5, once: true }}
+          className={styles.wrapper}
+        >
           <div className={styles.textBlocks}>
-            <div className={styles.textBlock}>
+            <motion.div
+              variants={xPlusAnimation}
+              custom={1}
+              className={styles.textBlock}
+            >
               <h3 className={styles.header}>О саундхилинге</h3>
               <p className={styles.text}>
                 Саундхилинг - это древняя методика, которая использует звуковые
@@ -16,8 +49,12 @@ const SoundHealing = () => {
                 медитации, помогая людям расслабиться и настроиться на
                 позитивный лад.
               </p>
-            </div>
-            <div className={styles.textBlockRight}>
+            </motion.div>
+            <motion.div
+              variants={xMinusAnimation}
+              custom={2}
+              className={styles.textBlockRight}
+            >
               <div className={styles.child}>
                 <h3 className={styles.header}>Как работает саундхилинг?</h3>
                 <p className={styles.text}>
@@ -30,11 +67,14 @@ const SoundHealing = () => {
                   гармонии.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
-
-          <ul className={styles.soundHealingUl}>
-            <h3 className={styles.header}> Польза саундхилинга</h3>
+          <motion.ul
+            variants={xPlusAnimation}
+            custom={3}
+            className={styles.soundHealingUl}
+          >
+            <h3 className={styles.header}>Польза саундхилинга</h3>
             <li>
               <OrangeCheck />
               <p className={styles.text}>
@@ -68,8 +108,8 @@ const SoundHealing = () => {
                 состоянию в течение дня.
               </p>
             </li>
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       </div>
     </div>
   );

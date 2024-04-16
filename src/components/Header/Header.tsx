@@ -18,14 +18,25 @@ const Header: React.FC<IHeaderProps> = ({
   };
   return (
     <div className={styles.wrapper}>
-      <h3 onClick={() => scrollUp()} className={styles.name}>
-        WORLD SOUND HEAL
-      </h3>
+      <div className={styles.burgerButton}>
+        <img
+          src={
+            imgUrl
+              ? imgUrl + "/images/icons/burger.svg"
+              : "/images/icons/burger.svg"
+          }
+          alt=""
+        ></img>
+      </div>
+      <div className={styles.name}>
+        <h3 onClick={() => scrollUp()}>WORLD SOUND HEAL</h3>
+      </div>
       <img
         className={styles.logo}
         src={imgUrl ? imgUrl + "/images/logo.png" : "/images/logo.png"}
         alt=""
       ></img>
+
       <nav className={styles.menu}>
         <ul>
           <li onClick={() => refToAbout()}>О нас</li>

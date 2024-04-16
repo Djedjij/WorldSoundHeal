@@ -9,7 +9,7 @@ const FormBlock = () => {
           Оставьте своё сообщение, и мы обязательно свяжемся с вами в кратчайшие
           сроки
         </p>
-        <form action="">
+        <form className={styles.formBlock} action="">
           <input
             className={styles.formInput}
             type="text"

@@ -53,15 +53,15 @@ $openSansFont: "Open Sans", Arial, sans-serif;
 @mixin wrapper-1170px {
   width: 1170px;
 }
-@mixin headerh3 {
-  font-size: 42px;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.23;
-}
 
 @mixin bigP {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+@mixin headerh3 {
+  font-size: 42px;
+  line-height: 1.23;
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }

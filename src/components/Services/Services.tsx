@@ -13,7 +13,7 @@ const Services = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
               <img src={service.img} alt="" />
               <h4>{service.name}</h4>
               <div className={styles.desc}>
-                <p>{service.description}</p>
+                <p className={styles.description}>{service.description}</p>
                 <div className={styles.price}>
                   <p>От</p>
                   <p className={styles.priceNum}>{service.price}</p>
