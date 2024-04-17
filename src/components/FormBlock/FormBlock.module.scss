@@ -31,7 +31,14 @@
 .shadow form {
   margin-top: 50px;
 }
-
+.formBlock {
+  display: flex;
+}
+.formInputBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .formInput {
   margin: 10px;
   height: 40px;
@@ -71,10 +78,14 @@
   }
   .formBlock {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .formInputBlock {
+    width: 100%;
+    display: flex;
   }
   .formInput {
     width: 80%;
@@ -97,4 +108,14 @@
     width: 80%;
     text-align: center;
   }
+}
+.textError {
+  color: red;
+  font-size: 13px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -15px;
+  font-weight: 400;
 }

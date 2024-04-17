@@ -36,9 +36,10 @@ const Header: React.FC<IHeaderProps> = ({
         ></img>
       </div>
       <div className={styles.name}>
-        <h3 onClick={() => scrollUp()}>WORLD SOUND HEAL</h3>
+        <h3 onClick={scrollUp}>WORLD SOUND HEAL</h3>
       </div>
       <img
+        onClick={scrollUp}
         className={styles.logo}
         src={imgUrl ? imgUrl + "/images/logo.png" : "/images/logo.png"}
         alt=""

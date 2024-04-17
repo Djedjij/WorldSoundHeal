@@ -66,9 +66,14 @@
   align-items: center;
   width: 100%;
 }
-
+.formInputBlock {
+  position: relative;
+  width: max-content;
+  align-items: center;
+  display: flex;
+}
 .formInput {
-  margin: 10px;
+  margin: 20px 10px;
   height: 40px;
   padding: 8px 15px;
   border: 2px solid white;
@@ -128,4 +133,15 @@
     width: 80%;
     text-align: center;
   }
+}
+
+.textError {
+  color: red;
+  font-size: 13px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -5px;
+  font-weight: 400;
 }
