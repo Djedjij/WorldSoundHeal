@@ -32,7 +32,7 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
           custom={1}
           className={styles.header}
         >
-          Исцелите себя звуком сегодня
+          ИСЦЕЛИТЕ СЕБЯ ЗВУКОМ СЕГОДНЯ
         </motion.h1>
         <motion.h4
           variants={cardsAnimationY}

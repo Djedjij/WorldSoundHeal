@@ -8,8 +8,8 @@ const Motivation = () => {
     <div className={styles.bigWrapper}>
       <div className={styles.wrapper}>
         <h3 className={styles.header}>
-          Позвольте силе звука раскрыть ваш внутренний мир и принести гармонию в
-          каждый день
+          ПОЗВОЛЬТЕ СИЛЕ ЗВУКА РАСКРЫТЬ ВАШ ВНУТРЕННИЙ МИР И ПРИНЕСТИ ГАРМОНИЮ В
+          КАЖДЫЙ ДЕНЬ
         </h3>
         <p className={styles.text}>
           Окунитесь в мир глубокого исцеления саундхилинга с World Sound Heal.
