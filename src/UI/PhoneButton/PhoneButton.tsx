@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./PhoneButton.module.scss";
 import { imgUrl } from "../../utils/consts";
 import Modal from "../Modal/Modal";
-const PhoneButton = () => {
-  const [activeModal, setActiveModal] = useState<boolean>(false);
+interface IPhoneButtonProps {
+  activeModal: boolean;
+  setActiveModal: (activeModal: boolean) => void;
+}
 
+const PhoneButton: React.FC<IPhoneButtonProps> = ({
+  activeModal,
+  setActiveModal,
+}) => {
   return (
     <div>
       {!activeModal && (

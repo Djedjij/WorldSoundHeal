@@ -6,11 +6,13 @@ interface IHeaderProps {
   refToAbout: () => void;
   refToContacts: () => void;
   refToServices: () => void;
+  setActiveModal: (activeModal: boolean) => void;
 }
 const DropHeader: React.FC<IHeaderProps> = ({
   refToAbout,
   refToContacts,
   refToServices,
+  setActiveModal,
 }) => {
   const [isDrop, setIsDrop] = useState("-150px");
 
@@ -26,6 +28,7 @@ const DropHeader: React.FC<IHeaderProps> = ({
   return (
     <div style={{ top: isDrop }} className={styles.header}>
       <Header
+        setActiveModal={setActiveModal}
         refToAbout={refToAbout}
         refToContacts={refToContacts}
         refToServices={refToServices}

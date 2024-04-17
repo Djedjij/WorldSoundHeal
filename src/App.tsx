@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.scss";
 import Main from "./components/Main/Main";
 import Header from "./components/Header/Header";
@@ -13,6 +13,7 @@ import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import DropHeader from "./components/Header/DropHeader";
 import PhoneButton from "./UI/PhoneButton/PhoneButton";
+import Modal from "./UI/Modal/Modal";
 
 function App() {
   const refAbout = useRef<HTMLDivElement>(null);
@@ -30,29 +31,32 @@ function App() {
       behavior: "smooth",
     });
   };
-
+  const [activeModal, setActiveModal] = useState<boolean>(false);
   return (
     <div className="App">
       <Header
         refToAbout={refToAbout}
         refToContacts={refToContacts}
         refToServices={refToServices}
+        setActiveModal={setActiveModal}
       />
       <DropHeader
         refToAbout={refToAbout}
         refToContacts={refToContacts}
         refToServices={refToServices}
+        setActiveModal={setActiveModal}
       />
-      <Main refToAbout={refToAbout} />
+      <Main refToAbout={refToAbout} setActiveModal={setActiveModal} />
       <About ref={refAbout} />
       <SoundHealing />
       <Services ref={refServices} />
-      <Motivation />
+      <Motivation setActiveModal={setActiveModal} />
       <Advantages />
       <Reviews />
       <FormBlock />
       <Contacts ref={refContacts} />
-      <PhoneButton />
+      <PhoneButton activeModal={activeModal} setActiveModal={setActiveModal} />
+      <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
       <Footer />
     </div>
   );

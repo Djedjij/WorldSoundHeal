@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Main.module.scss";
 import OrangeButton from "../../UI/OrangeButton/OrangeButton";
 import { motion } from "framer-motion";
 import { imgUrl } from "../../utils/consts";
-import Modal from "../../UI/Modal/Modal";
+
 interface iMainProps {
   refToAbout: () => void;
+  setActiveModal: (activeModal: boolean) => void;
 }
-const Main: React.FC<iMainProps> = ({ refToAbout }) => {
-  const [activeModal, setActiveModal] = useState<boolean>(false);
+const Main: React.FC<iMainProps> = ({ refToAbout, setActiveModal }) => {
   const cardsAnimationY = {
     hidden: {
       y: 200,
@@ -59,7 +59,6 @@ const Main: React.FC<iMainProps> = ({ refToAbout }) => {
           }
           alt=""
         ></img>
-        <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
       </div>
     </motion.div>
   );

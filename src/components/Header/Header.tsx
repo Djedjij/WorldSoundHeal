@@ -1,25 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { imgUrl } from "../../utils/consts";
+import BurgerMenu from "../../UI/BurgerMenu/BurgerMenu";
 
 interface IHeaderProps {
   refToAbout: () => void;
   refToContacts: () => void;
   refToServices: () => void;
+  setActiveModal: (activeModal: boolean) => void;
 }
 
 const Header: React.FC<IHeaderProps> = ({
   refToAbout,
   refToContacts,
   refToServices,
+  setActiveModal,
 }) => {
   const scrollUp = () => {
     window.scroll(0, 0);
   };
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
     <div className={styles.wrapper}>
-      <div className={styles.burgerButton}>
+      <div
+        className={openMenu ? styles.burgerButtonActive : styles.burgerButton}
+      >
         <img
+          onClick={() => setOpenMenu(!openMenu)}
           src={
             imgUrl
               ? imgUrl + "/images/icons/burger.svg"
@@ -44,6 +51,14 @@ const Header: React.FC<IHeaderProps> = ({
           <li onClick={() => refToContacts()}>Контакты</li>
         </ul>
       </nav>
+      <BurgerMenu
+        openMenu={openMenu}
+        setMenuOpen={setOpenMenu}
+        refToAbout={refToAbout}
+        refToContacts={refToContacts}
+        refToServices={refToServices}
+        setActiveModal={setActiveModal}
+      />
     </div>
   );
 };
