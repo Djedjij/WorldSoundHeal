@@ -6,11 +6,13 @@ import ReactDOM from "react-dom";
 interface IModalCompleteProps {
   showModalDone: boolean;
   setShowModalDone: (showModalDone: boolean) => void;
+  modalMessage: string;
 }
 
 const ModalComplete: React.FC<IModalCompleteProps> = ({
   showModalDone,
   setShowModalDone,
+  modalMessage,
 }) => {
   return ReactDOM.createPortal(
     <div
@@ -18,16 +20,35 @@ const ModalComplete: React.FC<IModalCompleteProps> = ({
         showModalDone ? `${styles.modal} ${styles.modalActive}` : styles.modal
       }
     >
-      <img
-        className={styles.bird}
-        src={
-          imgUrl ? imgUrl + "/images/icons/bird.svg" : "/images/icons/bird.svg"
-        }
-        alt=""
-      />
-      <p>
-        Ваша заявка принята. В ближайшее время с вами свяжется наш сотрудник.
-      </p>
+      {modalMessage ? (
+        <>
+          <img
+            className={styles.bird}
+            src={
+              imgUrl
+                ? imgUrl + "/images/icons/bird.svg"
+                : "/images/icons/bird.svg"
+            }
+            alt=""
+          />
+          <p>{modalMessage}</p>
+        </>
+      ) : (
+        <>
+          <img
+            className={styles.redCross}
+            src={
+              imgUrl
+                ? imgUrl + "/images/icons/redCross.svg"
+                : "/images/icons/redCross.svg"
+            }
+            alt=""
+          />
+          <p className={styles.errorMessage}>
+            "Произошла ошибка. Попробуйте позже"
+          </p>
+        </>
+      )}
     </div>,
     document.body
   );

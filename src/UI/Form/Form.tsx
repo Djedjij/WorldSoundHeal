@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { IMaskInput } from "react-imask";
 import ModalComplete from "../ModalComplete/ModalComplete";
+import { senqRequest } from "../../http/api";
 interface IFormProps {
   styles: any;
   activeModal: boolean;
@@ -13,7 +14,7 @@ const Form: React.FC<IFormProps> = ({
   setActiveModal,
 }) => {
   const [showModalDone, setShowModalDone] = useState<boolean>(false);
-
+  const [modalMessage, setModalMessage] = useState<string>("");
   const showModal = () => {
     setShowModalDone(true);
     setTimeout(() => setShowModalDone(false), 5000);
@@ -64,21 +65,27 @@ const Form: React.FC<IFormProps> = ({
     }
     return false;
   };
-
   const submitForm = async (e: any) => {
     e.preventDefault();
     const errorName = checkName(name);
     const phoneError = checkPhone(phone);
     const textError = checkText(text);
     if (!errorName && !phoneError && !textError) {
-      showModal();
-      setName("");
-      setPhone("");
-      setText("");
-      setActiveModal(false);
+      senqRequest({ name, phone, text }).then((data) => {
+        if (data) {
+          setModalMessage(data);
+          showModal();
+          setName("");
+          setPhone("");
+          setText("");
+          setActiveModal(false);
+        } else {
+          setModalMessage("");
+          showModal();
+        }
+      });
     }
   };
-
   return (
     <div>
       <div className={styles.shadow}>
@@ -140,6 +147,7 @@ const Form: React.FC<IFormProps> = ({
       <ModalComplete
         showModalDone={showModalDone}
         setShowModalDone={setShowModalDone}
+        modalMessage={modalMessage}
       />
     </div>
   );
