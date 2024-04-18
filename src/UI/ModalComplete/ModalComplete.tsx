@@ -19,16 +19,6 @@ const ModalComplete: React.FC<IModalCompleteProps> = ({
       }
     >
       <img
-        onClick={() => setShowModalDone(false)}
-        className={styles.crossBtn}
-        src={
-          imgUrl
-            ? imgUrl + "/images/icons/cross.svg"
-            : "/images/icons/cross.svg"
-        }
-        alt=""
-      />
-      <img
         className={styles.bird}
         src={
           imgUrl ? imgUrl + "/images/icons/bird.svg" : "/images/icons/bird.svg"
