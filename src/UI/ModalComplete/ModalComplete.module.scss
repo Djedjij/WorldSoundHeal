@@ -1,0 +1,44 @@
+@use "../../App.scss" as App;
+@import "../../App.scss";
+
+.modal {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: App.$orange;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.modalActive {
+  opacity: 1;
+}
+.crossBtn {
+  position: absolute;
+  right: 8px;
+  width: 12px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.bird {
+  border: 2px solid App.$orange;
+  width: 12px;
+  padding: 5px 4px 5px 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 670px) {
+  .modal {
+    right: 30px;
+    width: 50vw;
+    padding-left: 10px;
+  }
+}

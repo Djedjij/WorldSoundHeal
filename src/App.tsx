@@ -32,6 +32,7 @@ function App() {
     });
   };
   const [activeModal, setActiveModal] = useState<boolean>(false);
+
   return (
     <div className="App">
       <Header
