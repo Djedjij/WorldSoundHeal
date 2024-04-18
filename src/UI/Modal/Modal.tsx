@@ -19,7 +19,11 @@ const Modal: React.FC<IModalProps> = ({ activeModal, setActiveModal }) => {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <Form styles={styles} />
+        <Form
+          activeModal={activeModal}
+          setActiveModal={setActiveModal}
+          styles={styles}
+        />
       </div>
     </div>
   );

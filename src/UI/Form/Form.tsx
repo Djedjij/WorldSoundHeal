@@ -3,9 +3,15 @@ import { IMaskInput } from "react-imask";
 import ModalComplete from "../ModalComplete/ModalComplete";
 interface IFormProps {
   styles: any;
+  activeModal: boolean;
+  setActiveModal: (activeModal: boolean) => void;
 }
 
-const Form: React.FC<IFormProps> = ({ styles }) => {
+const Form: React.FC<IFormProps> = ({
+  styles,
+  activeModal,
+  setActiveModal,
+}) => {
   const [showModalDone, setShowModalDone] = useState<boolean>(false);
 
   const showModal = () => {
@@ -69,6 +75,7 @@ const Form: React.FC<IFormProps> = ({ styles }) => {
       setName("");
       setPhone("");
       setText("");
+      setActiveModal(false);
     }
   };
 

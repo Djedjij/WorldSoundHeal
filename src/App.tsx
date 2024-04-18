@@ -54,7 +54,7 @@ function App() {
       <Motivation setActiveModal={setActiveModal} />
       <Advantages />
       <Reviews />
-      <FormBlock />
+      <FormBlock activeModal={activeModal} setActiveModal={setActiveModal} />
       <Contacts ref={refContacts} />
       <PhoneButton activeModal={activeModal} setActiveModal={setActiveModal} />
       <Modal activeModal={activeModal} setActiveModal={setActiveModal} />
