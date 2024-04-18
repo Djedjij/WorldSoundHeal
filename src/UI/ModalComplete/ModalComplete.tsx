@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ModalComplete.module.scss";
 import { imgUrl } from "../../utils/consts";
+import ReactDOM from "react-dom";
 
 interface IModalCompleteProps {
   showModalDone: boolean;
@@ -11,7 +12,7 @@ const ModalComplete: React.FC<IModalCompleteProps> = ({
   showModalDone,
   setShowModalDone,
 }) => {
-  return (
+  return ReactDOM.createPortal(
     <div
       className={
         showModalDone ? `${styles.modal} ${styles.modalActive}` : styles.modal
@@ -37,7 +38,8 @@ const ModalComplete: React.FC<IModalCompleteProps> = ({
       <p>
         Ваша заявка принята. В ближайшее время с вами свяжется наш сотрудник.
       </p>
-    </div>
+    </div>,
+    document.body
   );
 };
 
