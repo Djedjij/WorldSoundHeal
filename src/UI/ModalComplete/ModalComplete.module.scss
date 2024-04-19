@@ -46,10 +46,16 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 610px) {
   .modal {
     right: 30px;
-    width: 50vw;
+
+    width: 70%;
     padding-left: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 78%;
   }
 }
