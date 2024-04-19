@@ -102,6 +102,7 @@ const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
         >
           <div className={styles.formInputBlock}>
             <input
+              autoComplete="off"
               className={styles.formInput}
               type="text"
               placeholder="Имя"
