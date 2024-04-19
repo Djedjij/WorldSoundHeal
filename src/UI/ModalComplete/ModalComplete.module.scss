@@ -4,7 +4,7 @@
 .modal {
   position: fixed;
   top: 100px;
-  right: 30px;
+  right: -100%;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   color: App.$orange;
@@ -14,13 +14,11 @@
   font-size: 12px;
   border-radius: 3px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  display: none;
+  transition: 0.3s ease-in-out;
 }
 .modalActive {
   opacity: 1;
-
-  display: flex;
+  right: 30px;
 }
 .crossBtn {
   position: absolute;
@@ -28,6 +26,7 @@
   width: 12px;
   top: 8px;
   cursor: pointer;
+  width: 100%;
 }
 
 .bird {
@@ -51,8 +50,6 @@
 
 @media screen and (max-width: 610px) {
   .modal {
-    right: 30px;
-
     width: 70%;
     padding-left: 10px;
   }
