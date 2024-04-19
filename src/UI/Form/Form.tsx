@@ -2,24 +2,21 @@ import React, { useRef, useState } from "react";
 import { IMaskInput } from "react-imask";
 import ModalComplete from "../ModalComplete/ModalComplete";
 import { senqRequest } from "../../http/api";
+import Loader from "../Loader/Loader";
 interface IFormProps {
   styles: any;
   activeModal: boolean;
   setActiveModal: (activeModal: boolean) => void;
 }
 
-const Form: React.FC<IFormProps> = ({
-  styles,
-  activeModal,
-  setActiveModal,
-}) => {
+const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
   const [showModalDone, setShowModalDone] = useState<boolean>(false);
   const [modalMessage, setModalMessage] = useState<string>("");
   const showModal = () => {
     setShowModalDone(true);
     setTimeout(() => setShowModalDone(false), 5000);
   };
-
+  const [loading, setLoading] = useState<boolean>(false);
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
   const [phone, setPhone] = useState("");
@@ -71,8 +68,10 @@ const Form: React.FC<IFormProps> = ({
     const phoneError = checkPhone(phone);
     const textError = checkText(text);
     if (!errorName && !phoneError && !textError) {
+      setLoading(true);
       senqRequest({ name, phone, text }).then((data) => {
         if (data) {
+          setLoading(false);
           setModalMessage(data);
           showModal();
           setName("");
@@ -80,6 +79,7 @@ const Form: React.FC<IFormProps> = ({
           setText("");
           setActiveModal(false);
         } else {
+          setLoading(false);
           setModalMessage("");
           showModal();
         }
@@ -87,9 +87,10 @@ const Form: React.FC<IFormProps> = ({
     }
   };
   return (
-    <div>
+    <div className={loading && styles.shadowActive}>
       <div className={styles.shadow}>
         <h3 className={styles.header}>Напишите нам сейчас</h3>
+
         <p className={styles.text}>
           Оставьте своё сообщение, и мы обязательно свяжемся с вами в кратчайшие
           сроки
@@ -137,7 +138,9 @@ const Form: React.FC<IFormProps> = ({
             />
             {textError && <p className={styles.textError}>{textError}</p>}
           </div>
-          <input className={styles.submitInput} type="submit" />
+          <button className={styles.submitInput}>
+            {loading ? <Loader /> : "Отправить"}
+          </button>
         </form>
         <p className={styles.confidential}>
           Отправляя данную форму вы соглашаетесь с{" "}

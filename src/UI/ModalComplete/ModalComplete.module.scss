@@ -3,7 +3,7 @@
 
 .modal {
   position: fixed;
-  bottom: 30px;
+  top: 100px;
   right: 30px;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
@@ -43,6 +43,7 @@
 }
 .errorMessage {
   color: red;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 670px) {
