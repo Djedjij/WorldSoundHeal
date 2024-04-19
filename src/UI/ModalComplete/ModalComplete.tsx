@@ -17,7 +17,7 @@ const ModalComplete: React.FC<IModalCompleteProps> = ({
   return ReactDOM.createPortal(
     <div
       className={
-        !showModalDone ? `${styles.modal} ${styles.modalActive}` : styles.modal
+        showModalDone ? `${styles.modal} ${styles.modalActive}` : styles.modal
       }
     >
       {modalMessage ? (
