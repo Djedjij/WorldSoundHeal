@@ -87,7 +87,7 @@ const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
     }
   };
   return (
-    <div className={loading && styles.shadowActive}>
+    <div className={loading ? styles.shadowActive : ""}>
       <div className={styles.shadow}>
         <h3 className={styles.header}>Напишите нам сейчас</h3>
 
