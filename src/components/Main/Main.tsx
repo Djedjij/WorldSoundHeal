@@ -25,7 +25,16 @@ const Main: React.FC<iMainProps> = ({ refToAbout, setActiveModal }) => {
     }),
   };
   return (
-    <motion.div className={styles.wrapper} initial="hidden" animate="visible">
+    <motion.div
+      className={styles.wrapper}
+      style={{
+        backgroundImage: `url( 
+         ${imgUrl ? imgUrl + "/images/main1.jpg" : "/images/main1.jpg"}
+        )`,
+      }}
+      initial="hidden"
+      animate="visible"
+    >
       <div className={styles.main}>
         <motion.h1
           variants={cardsAnimationY}

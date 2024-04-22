@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./SoundHealing.module.scss";
 import OrangeCheck from "../../UI/OrangeCheck.tsx/OrangeCheck";
 import { motion } from "framer-motion";
+import { imgUrl } from "../../utils/consts";
 const SoundHealing = () => {
   const xPlusAnimation = {
     hidden: {
@@ -27,7 +28,14 @@ const SoundHealing = () => {
   };
 
   return (
-    <div className={styles.bigWrapper}>
+    <div
+      className={styles.bigWrapper}
+      style={{
+        backgroundImage: `url( 
+       ${imgUrl ? imgUrl + "/images/main2.jpeg" : "/images/main2.jpeg"}
+      )`,
+      }}
+    >
       <div className={styles.shadow}>
         <motion.div
           initial="hidden"

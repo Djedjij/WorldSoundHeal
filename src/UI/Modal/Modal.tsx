@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Modal.module.scss";
 import Form from "../Form/Form";
+import { imgUrl } from "../../utils/consts";
 
 interface IModalProps {
   activeModal: boolean;
@@ -17,6 +18,11 @@ const Modal: React.FC<IModalProps> = ({ activeModal, setActiveModal }) => {
         className={`${styles.modalContent} ${
           activeModal && styles.activeContent
         }`}
+        style={{
+          backgroundImage: `url( 
+           ${imgUrl ? imgUrl + "/images/main5.jpg" : "/images/main5.jpg"}
+          )`,
+        }}
         onClick={(e) => e.stopPropagation()}
       >
         <Form

@@ -3,7 +3,6 @@
 
 .wrapper {
   @include wrapper;
-  background-image: url("../../../public/images/main1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -25,6 +24,7 @@
   font-weight: 550;
   line-height: 1.17;
   letter-spacing: 1px;
+  text-align: center;
 }
 .smallHeader {
   margin-top: 40px;
@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 940px) {
   .header {
     font-size: 2em;
   }
