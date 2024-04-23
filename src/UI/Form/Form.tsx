@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { IMaskInput } from "react-imask";
 import ModalComplete from "../ModalComplete/ModalComplete";
-import { senqRequest } from "../../http/api";
 import Loader from "../Loader/Loader";
+import { sendMessage } from "../../utils/sendMessage";
 interface IFormProps {
   styles: any;
   activeModal: boolean;
@@ -69,21 +69,23 @@ const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
     const textError = checkText(text);
     if (!errorName && !phoneError && !textError) {
       setLoading(true);
-      senqRequest({ name, phone, text }).then((data) => {
-        if (data) {
-          setLoading(false);
-          setModalMessage(data);
-          showModal();
-          setName("");
-          setPhone("");
-          setText("");
-          setActiveModal(false);
-        } else {
-          setLoading(false);
-          setModalMessage("");
-          showModal();
-        }
-      });
+
+      const data = await sendMessage(name, phone, text);
+      if (!data) {
+        setModalMessage("");
+        setLoading(false);
+        showModal();
+      } else {
+        setLoading(false);
+        setModalMessage(
+          "Заявка успешно отправлена. В ближайшее время с вами свяжется наш сотрудник"
+        );
+        showModal();
+        setName("");
+        setPhone("");
+        setText("");
+        setActiveModal(false);
+      }
     }
   };
   return (
