@@ -13,7 +13,7 @@ interface IReview {
   company: string;
 }
 
-export const imgUrl = "/WorldSoundHeal";
+export const imgUrl = "";
 
 export const services: IService[] = [
   {

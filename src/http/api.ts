@@ -9,7 +9,7 @@ interface IFromData {
 export const senqRequest = async (formData: IFromData) => {
   try {
     const { data } = await axios.post(
-      "http://localhost:5000/sendRequest",
+      "http://178.172.161.179:5000/sendRequest",
       formData
     );
     console.log(data);
