@@ -5,9 +5,10 @@ export const sendMessage = async (name, phone, text) => {
       To: "mat3347571@gmail.com",
       From: "mat3347571@gmail.com",
       Subject: `Заявка от ${name}`,
-      Body: `имя ${name}; номер телефона: ${phone}; сообщение: ${text}`,
+      Body: `Имя ${name}; Номер телефона: ${phone}; ${
+        text ? `Сообщение: ${text}; ` : ""
+      }`,
     });
-    console.log(data);
     return data;
   } catch (error) {
     return error;
