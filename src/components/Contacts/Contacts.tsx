@@ -12,34 +12,40 @@ const Contacts = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
       <p className={styles.smallHeader}>Мы в социальных сетях</p>
       <div className={styles.socials}>
         <div className={styles.social}>
-          <img
-            src={
-              imgUrl
-                ? imgUrl + "/images/icons/youtube.svg"
-                : "/images/icons/youtube.svg"
-            }
-            alt=""
-          />
+          <a href="https://www.youtube.com/@WorldSoundHeal_BY">
+            <img
+              src={
+                imgUrl
+                  ? imgUrl + "/images/icons/youtube.svg"
+                  : "/images/icons/youtube.svg"
+              }
+              alt=""
+            />
+          </a>
         </div>
         <div className={styles.social}>
-          <img
-            src={
-              imgUrl
-                ? imgUrl + "/images/icons/instagram.svg"
-                : "/images/icons/instagram.svg"
-            }
-            alt=""
-          />
+          <a href="https://www.instagram.com/worldsoundheal_by/">
+            <img
+              src={
+                imgUrl
+                  ? imgUrl + "/images/icons/instagram.svg"
+                  : "/images/icons/instagram.svg"
+              }
+              alt=""
+            />
+          </a>
         </div>
         <div className={styles.social}>
-          <img
-            src={
-              imgUrl
-                ? imgUrl + "/images/icons/telegram.svg"
-                : "/images/icons/telegram.svg"
-            }
-            alt=""
-          />
+          <a href="https://t.me/worldsoundheal_by">
+            <img
+              src={
+                imgUrl
+                  ? imgUrl + "/images/icons/telegram.svg"
+                  : "/images/icons/telegram.svg"
+              }
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </div>

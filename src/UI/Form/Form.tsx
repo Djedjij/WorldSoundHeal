@@ -35,7 +35,7 @@ const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
 
   const checkPhone = (phone: string) => {
     if (!phone) {
-      setPhoneError(`Поле "Телефон" не может быть пустым`);
+      setPhoneError(`Поле "Телефон" не должно быть пустым`);
       return true;
     } else if (phone.length < 9) {
       setPhoneError("Номер слишком короткий");
