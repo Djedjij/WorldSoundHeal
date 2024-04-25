@@ -41,8 +41,8 @@ const Header: React.FC<IHeaderProps> = ({
       <img
         onClick={scrollUp}
         className={styles.logo}
-        src={imgUrl ? imgUrl + "/images/logo.png" : "/images/logo.png"}
-        alt=""
+        src={imgUrl ? imgUrl + "/images/Logo.svg" : "/images/Logo.svg"}
+        alt="logo"
       ></img>
 
       <nav className={styles.menu}>

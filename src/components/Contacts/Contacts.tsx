@@ -5,7 +5,7 @@ const Contacts = React.forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
   return (
     <div ref={ref} className={styles.wrapper}>
       <h5 className={styles.header}>НАШИ КОНТАКТЫ</h5>
-      <p className={styles.phone}>+375 33 123 45 67</p>
+      <p className={styles.phone}>+375 25 934-54-75</p>
       <a className={styles.mail} href="mailto:mail@worldsoundheal.by">
         mail@worldsoundheal.by
       </a>

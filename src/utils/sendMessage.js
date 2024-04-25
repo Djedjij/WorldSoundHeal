@@ -1,13 +1,17 @@
 export const sendMessage = async (name, phone, text) => {
+  let ebody = ` <b>Имя: </b>${name}
+  <br />
+  <b>Номер телефона: </b>${phone}
+  <br />
+  ${text ? `<b>Сообщение: </b> ${text}` : ""}`;
+
   try {
     const data = await window.Email.send({
-      SecureToken: "f23cb274-bbfd-4d88-936a-717caf3b7531",
-      To: "mat3347571@gmail.com",
-      From: "mat3347571@gmail.com",
+      SecureToken: "48f55893-374c-44bb-aaaa-6587e655bef1",
+      To: "orderwsh@ya.ru",
+      From: "orderwsh@ya.ru",
       Subject: `Заявка от ${name}`,
-      Body: `Имя ${name}; Номер телефона: ${phone}; ${
-        text ? `Сообщение: ${text}; ` : ""
-      }`,
+      Body: ebody,
     });
     return data;
   } catch (error) {

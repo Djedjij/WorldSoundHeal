@@ -147,7 +147,9 @@ const Form: React.FC<IFormProps> = ({ styles, setActiveModal }) => {
         </form>
         <p className={styles.confidential}>
           Отправляя данную форму вы соглашаетесь с{" "}
-          <a href="/">Политикой конфиденциальности</a>
+          <a href="/pdf/politika-v-otnoshenii-personalnyh-dannyh-posetitelej-sajta.pdf">
+            Политикой конфиденциальности
+          </a>
         </p>
       </div>
       <ModalComplete
